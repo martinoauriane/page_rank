@@ -37,11 +37,17 @@ def pageRank(pages, pageRank_score, max_iterations):
       new_scores[target_index] = new_rank
     
     pageRank_score = new_scores
-    print(f"------------PakeRank_score----------- {iteration + 1}", pageRank_score)
   
   return pageRank_score
   
 print("intial Page Rank", pageRank_score)
 result = pageRank(pages, pageRank_score, 3)
-print("\n")
-print("FINAL PageRank:\n", result)
+
+dictionnary = {pages[i]: result[i] for i in range(num_nodes)}
+
+classement = sorted(dictionnary.items(), key=lambda x: x[1], reverse=True)
+
+# affichage du classement
+print("\nClassement PageRank :")
+for rank, (page, score) in enumerate(classement, start=1):
+    print(f"{rank}. {page}  →  {score}")
