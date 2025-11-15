@@ -1,24 +1,28 @@
 # Page rank
 
-Page Rank is a method for rating web pages objectively, effectively measuring human interestand attention devoted to them. The page rank algortihm gives each page a rating equivalent to the page importance.
+Page Rank is a method for **rating web pages** objectively, effectively measuring human interestand attention devoted to them. The page rank algortihm gives each page a rating **equivalent to the page importance.**
 
 ![1763206884567](image/README/1763206884567.png)
 
-Where the Google Page rank algorithm was revolutionnary for its time is the importance of a page is measured by the importance of other pages linking to it. For example, in the above example, B is only referenced once, by A, yet it has a score of 34.3. This is because the Page Rank algorithm takes into account the importance of page A referencing to B. Therefore, the quality of links matters more than the quantity of links in the
+The Google Page rank algorithm was revolutionnary at its time because the importance of a page was measured by the importance of other pages linking to it. For example, in the above example, B is only referenced once, by A, yet it has a score of 34.3. While page D is referenced by 6 pages, but only has a score of 8.1. This is because the Page Rank algorithm takes into account the importance of page A referencing to B. **Therefore, the quality of links matters more than the quantity of links in the 1996 version of Page Rank algorithm.**
 
 ## Inner working
 
-The internet is a collection of N pages, with a very big N (10 to the power of 10 in october 2005). It's possible to represent the web with an adjency matrice of size N \* N.
+The internet is a **collection of N pages,** with a very big N (10 to the power of 10 in october 2005). It's possible to represent the web with an adjency matrice of size N \* N.
 
-    A		B		C		D
+```
 
-A 0 0 1 0
+    	A	B	C	D
 
-B 1 0 1 1
+A   	0 	0 	1 	0
 
-C 1 0 0 1
+B   	1 	0 	1 	1
 
-D 0 1 1 0
+C   	1 	0 	0 	1
+
+D   	0 	1 	1 	0
+
+```
 
 In this matrice, A points towards C. So A has 1 outbounds link. We can see that B points towards A, and C points towards A as well. So A has two inbounds links.
 
