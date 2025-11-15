@@ -4,7 +4,7 @@ Page Rank is a method for rating web pages objectively, effectively measuring hu
 
 ![1763206884567](image/README/1763206884567.png)
 
-Where the Google Page rank algortihm was revolutionnary for its time is the importance of a page is measured by the importance of other pages linking to it. For example, let's take a small web network of 4 pages: A, B, C, D. Page C has a higher page rank than page D, even though there's fewer links linking to C. It's because the only page linking to C (A) is of higher quality and importance.
+Where the Google Page rank algorithm was revolutionnary for its time is the importance of a page is measured by the importance of other pages linking to it. For example, in the above example, B is only referenced once, by A, yet it has a score of 34.3. This is because the Page Rank algorithm takes into account the importance of page A referencing to B. Therefore, the quality of links matters more than the quantity of links in the
 
 ## Inner working
 
